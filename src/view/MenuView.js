@@ -33,8 +33,19 @@ const MenuView = {
             MissionUtils.Console.print(error.message);
             return await this.inputCoachNames();
         }
-    }
+    },
 
+    async inputCanNotEatBy(name) {
+        try {
+            const input = await MissionUtils.Console.readLineAsync(`${name}(이)가 못 먹는 메뉴를 입력해 주세요.`);
+
+            //TODO: 검증코드구현
+            return input.split(',');
+        } catch (error) {
+            MissionUtils.Console.print(error.message);
+            return await this.inputCanNotEatBy(name);
+        }
+    }
 
 }
 
