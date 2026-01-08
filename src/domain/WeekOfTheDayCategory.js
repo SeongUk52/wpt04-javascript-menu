@@ -20,6 +20,10 @@ class WeekOfTheDayCategory {
         }
         this.setCategory();
     }
+
+    lastCategory() {
+        return this.#categoryOrder[-1];
+    }
 }
 
 export default WeekOfTheDayCategory;

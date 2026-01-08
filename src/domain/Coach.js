@@ -8,7 +8,7 @@ class Coach {
     }
 
     isEatable(menu) {
-        return !this.#canNotEat.includes(menu);
+        return (!this.#canNotEat.includes(menu) && !this.#menus.includes(menu));
     }
 
     pushMenu(menu) {
