@@ -11,7 +11,14 @@ class WeekOfTheDayCategory {
     }
 
     setCategory() {
-        this.#categoryOrder.push(WeekOfTheDayCategory.CATEGORY[Randoms.pickNumberInRange(1, 5)]);
+        const newCategory = WeekOfTheDayCategory.CATEGORY[Randoms.pickNumberInRange(1, 5)];
+        if(this.#categoryOrder
+            .filter(v => v === newCategory)
+            .length < 2) {
+            this.#categoryOrder.push(newCategory);
+            return;
+        }
+        this.setCategory();
     }
 }
 
