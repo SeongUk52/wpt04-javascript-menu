@@ -1,24 +1,28 @@
 class CoachRepository{
-    #Coaches
+    #coaches
 
     constructor() {
-        this.#Coaches = []
+        this.#coaches = []
     }
 
     save(coach) {
-        this.#Coaches.push(coach);
+        this.#coaches.push(coach);
     }
 
     findAll() {
-        return [...this.#Coaches];
+        return [...this.#coaches];
     }
 
     count() {
-        return this.#Coaches.length;
+        return this.#coaches.length;
     }
 
     clear() {
-        this.#Coaches = [];
+        this.#coaches = [];
+    }
+
+    findNameAll() {
+        return this.#coaches.map(v => v.getName);
     }
 }
 
