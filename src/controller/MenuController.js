@@ -1,11 +1,11 @@
-import InputView from "../view/InputView.js";
+import MenuView from "../view/MenuView.js";
 import MenuService from "../service/MenuService.js";
 
 class MenuController {
   #service;
   #view;
 
-  constructor(service = new MenuService(), view = InputView, sample) {
+  constructor(service = new MenuService(), view = MenuView, sample) {
     this.#service = service;
     this.#view = view;
   }
