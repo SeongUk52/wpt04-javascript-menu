@@ -2,9 +2,11 @@ import Category from "../domain/Category";
 
 class MenuService {
     #categoryRepository;
+    #coachRepository;
 
-    constructor(sample, categoryRepository) {
+    constructor(sample, categoryRepository, coachRepository) {
         this.#categoryRepository = categoryRepository;
+        this.#coachRepository = coachRepository;
         this.#initialize(sample);
     }
 

@@ -1,24 +1,24 @@
 class CategoryRepository {
-    #templates
+    #categorys
 
     constructor() {
-        this.#templates = []
+        this.#categorys = []
     }
 
     save(template) {
-        this.#templates.push(template);
+        this.#categorys.push(template);
     }
 
     findAll() {
-        return [...this.#templates];
+        return [...this.#categorys];
     }
 
     count() {
-        return this.#templates.length;
+        return this.#categorys.length;
     }
 
     clear() {
-        this.#templates = [];
+        this.#categorys = [];
     }
 }
 
