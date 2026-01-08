@@ -1,10 +1,12 @@
 class Coach {
     #menus;
     #canNotEat;
+    #name;
 
-    constructor() {
+    constructor(name) {
         this.#menus = [];
         this.#canNotEat = [];
+        this.#name = name;
     }
 
     isEatable(menu) {
@@ -13,6 +15,14 @@ class Coach {
 
     pushMenu(menu) {
         this.#menus.push(menu);
+    }
+
+    setCanNotEat(menus) {
+        this.#menus = menus;
+    }
+
+    getName() {
+        return this.#name;
     }
 }
 

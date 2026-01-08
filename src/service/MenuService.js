@@ -43,6 +43,15 @@ class MenuService {
         })
     }
 
+    findAllCoachNames() {
+
+    }
+
+    settingCoach(names) {
+        names.forEach(v => this.#coachRepository.save(v));
+    }
+
+    settingCoachCanNotEat()
 }
 
 export default MenuService;
