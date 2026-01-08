@@ -25,7 +25,7 @@ const MenuView = {
 
     async inputCoachNames() {
         try {
-            const input = await MissionUtils.Console.readLineAsync('코치의 이름을 입력해 주세요. (, 로 구분)');
+            const input = await MissionUtils.Console.readLineAsync('코치의 이름을 입력해 주세요. (, 로 구분)\n');
 
             //TODO: 검증코드구현
             return input.split(',');
@@ -37,7 +37,7 @@ const MenuView = {
 
     async inputCanNotEatBy(name) {
         try {
-            const input = await MissionUtils.Console.readLineAsync(`${name}(이)가 못 먹는 메뉴를 입력해 주세요.`);
+            const input = await MissionUtils.Console.readLineAsync(`${name}(이)가 못 먹는 메뉴를 입력해 주세요.\n`);
 
             //TODO: 검증코드구현
             return input.split(',');
@@ -45,6 +45,10 @@ const MenuView = {
             MissionUtils.Console.print(error.message);
             return await this.inputCanNotEatBy(name);
         }
+    },
+
+    printServiceStart() {
+        MissionUtils.Console.print('점심 메뉴 추천을 시작합니다.\n\n');
     }
 
 }
